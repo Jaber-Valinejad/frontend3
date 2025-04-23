@@ -1,10 +1,15 @@
-import styles from '../styles/layout.module.css'
+import styles from '../styles/layout.module.c
 
 export default function Layout(props) {
   return (
-    <div className={styles.layout}>
-      <h1 className={styles.title}>To Do</h1>
+    <div style={{
+      backgroundImage: "url('/background.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      minHeight: "100vh"
+    }}>
+      <h1 style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.8)' }}>To Do</h1>
       {props.children}
     </div>
-  )
+  );
 }
